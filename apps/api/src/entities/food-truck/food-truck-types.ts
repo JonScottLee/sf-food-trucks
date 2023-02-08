@@ -1,4 +1,4 @@
-export type FoodTruck = {
+export type FoodTruckProps = {
   objectid: string;
   applicant: string;
   facilitytype: string;
