@@ -1,4 +1,5 @@
 import { useFetchTrucks } from '../hooks/use-fetch-trucks';
+import { Card } from '../components/card/card';
 
 export function Index() {
   const { isFetching, foodTruckData } = useFetchTrucks();
@@ -10,7 +11,7 @@ export function Index() {
       <h1>Home</h1>
 
       {foodTruckData.map((truck) => (
-        <div key={truck.objectid}>{truck.applicant}</div>
+        <Card key={truck.objectid} {...truck} />
       ))}
     </>
   );
