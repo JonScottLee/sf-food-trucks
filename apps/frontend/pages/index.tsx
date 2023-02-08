@@ -1,7 +1,3 @@
-import styles from './index.module.scss';
-import { useEffect } from 'react';
-import { FoodTruck } from '@sf-food-trucks/util';
-import { FoodTruckDataService } from '../services/food-trucks';
 import { useFetchTrucks } from '../hooks/use-fetch-trucks';
 
 export function Index() {
