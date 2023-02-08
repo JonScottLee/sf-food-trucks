@@ -7,6 +7,13 @@ export const useFetchTrucks = () => {
   const [foodTruckData, setFootTruckData] = useState<FoodTruck[] | null>(null);
 
   useEffect(() => {
+    //
+    // TODO:
+    //
+    // There's an opportunity here to introduce a localStorage service, to check
+    // there for data before bothering to make the network request. Lots of tools available
+    // for this.
+    //
     FoodTruckDataService.getAll().then((response) => {
       setFootTruckData(response.data);
       setisFetching(false);
