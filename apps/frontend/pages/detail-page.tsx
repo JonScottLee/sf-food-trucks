@@ -44,9 +44,9 @@ const DetailPage = ({ data }) => {
               ></iframe>
             </div>
           </div>
-          <Button fullWidth clickHandler={router.back}>
-            Go Back
-          </Button>
+        </div>
+        <div className="mx-auto my-10">
+          <Button clickHandler={router.back}>Go Back</Button>
         </div>
       </main>
     </div>
