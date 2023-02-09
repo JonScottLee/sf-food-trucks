@@ -3,7 +3,6 @@ import { Button } from '../button/button';
 import Link from 'next/link';
 
 export const Card = ({ address, applicant, objectid }: FoodTruckProps) => {
-  console.log(objectid);
   return (
     <Link
       href={{
