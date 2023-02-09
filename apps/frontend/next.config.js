@@ -12,6 +12,16 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'fakeimg.pl',
+        port: '',
+        pathname: '/420x320/**',
+      },
+    ],
+  },
 };
 
 module.exports = withNx(nextConfig);
