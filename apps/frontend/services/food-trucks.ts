@@ -1,9 +1,19 @@
 import axios from '../axios';
 import { FoodTruck } from '@sf-food-trucks/util';
 
+const mapTruckData = (data: FoodTruck[]) => {
+  return data.reduce((acc, truck) => {
+    acc[truck.objectid] = truck;
+
+    return acc;
+  }, {});
+};
+
 class FoodTruckDataServiceRoot {
-  getAll() {
-    return axios.get<FoodTruck[]>('/food-trucks');
+  async getAll() {
+    const { data } = await axios.get<FoodTruck[]>('/food-trucks');
+
+    return mapTruckData(data);
   }
 }
 

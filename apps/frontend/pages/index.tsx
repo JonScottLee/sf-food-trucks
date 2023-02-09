@@ -10,9 +10,11 @@ export function Index() {
     <>
       <h1>Home</h1>
 
-      {foodTruckData.map((truck) => (
-        <Card key={truck.objectid} {...truck} />
-      ))}
+      {Object.keys(foodTruckData).map((key, idx) => {
+        const truck = foodTruckData[key];
+
+        return <Card key={`${truck.objectid}-${idx}`} {...truck} />;
+      })}
     </>
   );
 }

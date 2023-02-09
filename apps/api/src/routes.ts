@@ -1,6 +1,5 @@
 import { apiConfig } from './api-config';
-import { FoodTruck } from './entities/food-truck/food-truck-model';
-import { FoodTruckProps } from './entities/food-truck/food-truck-types';
+import { FoodTruck, FoodTruckProps } from '@sf-food-trucks/util';
 import { Request, Response } from 'express';
 import axios from 'axios';
 

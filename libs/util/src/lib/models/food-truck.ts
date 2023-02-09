@@ -11,12 +11,25 @@ export class FoodTruck {
   longitude: string;
 
   constructor(foodTruck: FoodTruckProps) {
+    this.objectid = '';
+    this.applicant = '';
+    this.facilitytype = '';
+    this.locationdescription = '';
+    this.address = '';
+    this.permit = '';
+    this.latitude = '';
+    this.longitude = '';
+
     Object.assign(this, foodTruck);
+  }
+
+  getMapSrc(key: string) {
+    return `https://www.google.com/maps/embed/v1/place?key=${key}&q=New York City`;
   }
 
   pickUsableData() {
     return {
-      objectId: this.objectid,
+      objectid: this.objectid,
       applicant: this.applicant,
       facilitytype: this.facilitytype,
       locationdescription: this.locationdescription,
