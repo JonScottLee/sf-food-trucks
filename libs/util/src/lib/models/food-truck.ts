@@ -1,4 +1,5 @@
 import { FoodTruckProps } from './food-truck-types';
+import axios from 'axios';
 
 export class FoodTruck {
   objectid: string;
@@ -23,15 +24,11 @@ export class FoodTruck {
     Object.assign(this, foodTruck);
   }
 
-  getMapSrc(key: string) {
-    return `https://www.google.com/maps/embed/v1/place?key=${key}&q=New York City`;
-  }
-
   pickUsableData() {
     return {
       objectid: this.objectid,
       applicant: this.applicant,
-      facilitytype: this.facilitytype,
+      facilitytype: this.facilitytype.toLowerCase(),
       locationdescription: this.locationdescription,
       address: this.address,
       permit: this.permit,

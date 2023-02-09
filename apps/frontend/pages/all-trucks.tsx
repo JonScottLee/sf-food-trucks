@@ -3,6 +3,7 @@ import { useFetchTrucks } from '../hooks/use-fetch-trucks';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { Button } from '../components/button/button';
+import axios from '../axios';
 
 const AllTrucks = () => {
   const router = useRouter();
