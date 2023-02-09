@@ -1,16 +1,10 @@
-import { FC, MouseEventHandler } from 'react';
-
 type ButtonProps = {
   clickHandler?: () => void;
   children: string;
   fullWidth?: boolean;
 };
 
-export const Button: FC<ButtonProps> = ({
-  clickHandler,
-  children,
-  fullWidth,
-}) => (
+export const Button = ({ clickHandler, children, fullWidth }: ButtonProps) => (
   <button
     className={`${
       fullWidth && `w-full`
