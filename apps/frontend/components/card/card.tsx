@@ -1,5 +1,5 @@
 import { FoodTruckProps } from '@sf-food-trucks/util';
-import Image from 'next/image';
+import { Button } from '../button/button';
 import Link from 'next/link';
 
 export const Card = ({ address, applicant, objectid }: FoodTruckProps) => {

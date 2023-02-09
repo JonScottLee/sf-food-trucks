@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { uiConfig } from '../ui-config';
-import { FoodTruckDataService } from '../services/food-trucks';
+import { Button } from '../components/button/button';
 import { useFetchTrucks } from '../hooks/use-fetch-trucks';
 
 const DetailPage = ({ data }) => {
@@ -14,6 +14,7 @@ const DetailPage = ({ data }) => {
 
   return (
     <div className="w-full p-4">
+      <Button clickHandler={router.back}>Go Back</Button>
       <main
         role="main"
         className="w-full flex flex-col h-screen content-center justify-center"
