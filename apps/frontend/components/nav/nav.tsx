@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
+import { routes } from '../../routes';
 
 type Classes = {
   nav: string;
@@ -63,12 +64,12 @@ export const Nav = () => {
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
             <li className="mr-3">
-              <a
+              <Link
                 className="inline-block py-2 px-4 text-black font-bold no-underline"
-                href="#"
+                href={routes.allTrucks}
               >
                 Active
-              </a>
+              </Link>
             </li>
             <li className="mr-3">
               <a
