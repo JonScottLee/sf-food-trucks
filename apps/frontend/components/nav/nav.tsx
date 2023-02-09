@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { routes } from '../../routes';
+import { NavLink } from './nav-link';
 
 type Classes = {
   nav: string;
@@ -8,12 +9,12 @@ type Classes = {
 };
 
 const normalClasses: Classes = {
-  nav: 'sticky w-full top-0 text-white transition-background duration-200',
+  nav: '',
   title: 'text-white',
 };
 
 const stickyClasses: Classes = {
-  nav: 'sticky w-full top-0 transition-background duration-200 bg-white z-10',
+  nav: 'bg-white ',
   title: 'text-black',
 };
 
@@ -31,7 +32,12 @@ export const Nav = () => {
   }, []);
 
   return (
-    <nav id="header" className={sticky ? stickyClasses.nav : normalClasses.nav}>
+    <nav
+      id="header"
+      className={`sticky w-full top-0 z-10 transition-background duration-200 ${
+        sticky ? stickyClasses.nav : normalClasses.nav
+      }`}
+    >
       <div className="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 py-2">
         <div className="pl-4 flex items-center">
           <Link
@@ -64,36 +70,21 @@ export const Nav = () => {
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
             <li className="mr-3">
-              <Link
-                className="inline-block py-2 px-4 text-black font-bold no-underline"
-                href={routes.allTrucks}
-              >
-                Active
-              </Link>
+              <NavLink href={routes.allTrucks}>My Kingdom</NavLink>
             </li>
             <li className="mr-3">
-              <a
-                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#"
-              >
-                link
-              </a>
+              <NavLink href={routes.allTrucks}>For</NavLink>
             </li>
             <li className="mr-3">
-              <a
-                className="inline-block text-black no-underline hover:text-gray-800 hover:text-underline py-2 px-4"
-                href="#"
-              >
-                link
-              </a>
+              <NavLink href={routes.allTrucks}>Some Links</NavLink>
             </li>
           </ul>
-          <button
-            id="navAction"
+          <Link
+            href="mailto:lee.jon.scott@gmail.com"
             className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
-            Action
-          </button>
+            Contact
+          </Link>
         </div>
       </div>
       <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
