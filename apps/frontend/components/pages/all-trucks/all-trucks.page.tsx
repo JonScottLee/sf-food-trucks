@@ -9,7 +9,7 @@ export const AllTrucks = () => {
   const router = useRouter();
   const { isFetching, foodTruckData } = useFetchTrucks();
 
-  if (true) return <AllTrucksSkeleton />;
+  if (isFetching) return <AllTrucksSkeleton />;
 
   return (
     <>

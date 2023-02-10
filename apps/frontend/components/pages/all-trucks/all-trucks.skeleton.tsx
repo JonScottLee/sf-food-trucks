@@ -1,11 +1,26 @@
 import { CardGrid } from '../../card-grid/card-grid';
 import { LoadingStripe } from '../../loading-stripe/loading-stripe';
+import { Button } from '../../button/button';
+
+const ActionButton = () => <Button>Details</Button>;
+
+const LoadingCard = () => (
+  <CardGrid.Card
+    title={<LoadingStripe />}
+    body={<LoadingStripe />}
+    action={<ActionButton />}
+  />
+);
 
 export const AllTrucksSkeleton = () => (
   <CardGrid>
-    <CardGrid.Card title={<LoadingStripe />} body={<LoadingStripe />} />
-    <CardGrid.Card title={<LoadingStripe />} body={<LoadingStripe />} />
-    <CardGrid.Card title={<LoadingStripe />} body={<LoadingStripe />} />
-    <CardGrid.Card title={<LoadingStripe />} body={<LoadingStripe />} />
+    <LoadingCard />
+    <LoadingCard />
+    <LoadingCard />
+    <LoadingCard />
+    <LoadingCard />
+    <LoadingCard />
+    <LoadingCard />
+    <LoadingCard />
   </CardGrid>
 );
