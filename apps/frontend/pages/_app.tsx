@@ -1,9 +1,11 @@
 import './styles.css';
 import { AppProps } from 'next/app';
+import { Breadcrumb } from '../components/breadcrumb/breadcrumb';
+import { Container } from '../components/container/container';
 import { Nav } from '../components/nav/nav';
-import Head from 'next/head';
-import { useRouter } from 'next/router';
 import { routes, RouteData } from '../routes';
+import { useRouter } from 'next/router';
+import Head from 'next/head';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -18,14 +20,18 @@ function CustomApp({ Component, pageProps }: AppProps) {
       </Head>
       <Nav />
       <main className="app">
-        <div className="pt-24">
-          <div className="container px-3 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+        <Container className="pt-2">
+          <Breadcrumb pathName={router.pathname} />
+        </Container>
+
+        <div className="pt-10">
+          <Container>
             {pageTitle && (
               <h1 className="text-5xl font-bold mb-10">{pageTitle}</h1>
             )}
 
             <Component {...pageProps} />
-          </div>
+          </Container>
         </div>
       </main>
     </>

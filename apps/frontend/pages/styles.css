@@ -17,3 +17,7 @@ h4,
 h5 {
   font-family: 'Source Sans Pro', sans-serif;
 }
+
+.disabled {
+  pointer-events: none;
+}
