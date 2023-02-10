@@ -1,7 +1,6 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
-import { routes } from '../../routes';
-import { NavLink } from './nav-link';
+import { NavItems } from './nav-items';
 
 type Classes = {
   nav: string;
@@ -31,6 +30,8 @@ export const Nav = () => {
     }
   }, []);
 
+  const [navOpen, setNavOpen] = useState(false);
+
   return (
     <nav
       id="header"
@@ -51,6 +52,7 @@ export const Nav = () => {
         </div>
         <div className="block lg:hidden pr-4">
           <button
+            onClick={() => setNavOpen(!navOpen)}
             id="nav-toggle"
             className="flex items-center p-1 text-pink-800 hover:text-gray-900 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
           >
@@ -64,28 +66,7 @@ export const Nav = () => {
             </svg>
           </button>
         </div>
-        <div
-          className="w-full flex-grow lg:flex lg:items-center lg:w-auto hidden mt-2 lg:mt-0 bg-white lg:bg-transparent text-black p-4 lg:p-0 z-20"
-          id="nav-content"
-        >
-          <ul className="list-reset lg:flex justify-end flex-1 items-center">
-            <li className="mr-3">
-              <NavLink href={routes['all-trucks'].href}>My Kingdom</NavLink>
-            </li>
-            <li className="mr-3">
-              <NavLink href={routes['all-trucks'].href}>For</NavLink>
-            </li>
-            <li className="mr-3">
-              <NavLink href={routes['all-trucks'].href}>Some Links</NavLink>
-            </li>
-          </ul>
-          <Link
-            href="mailto:lee.jon.scott@gmail.com"
-            className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full mt-4 lg:mt-0 py-4 px-8 shadow opacity-75 focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-          >
-            Contact
-          </Link>
-        </div>
+        <NavItems navOpen={navOpen} setNavOpen={setNavOpen} />
       </div>
       <hr className="border-b border-gray-100 opacity-25 my-0 py-0" />
     </nav>
