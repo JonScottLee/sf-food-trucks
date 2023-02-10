@@ -20,14 +20,14 @@ export const DetailPage = ({ data }) => {
       >
         <div className="text-center m-10">
           <h1 className="text-5xl font-bold">{applicant}</h1>
-          <p className="text-lg mt-3 font-light">
-            <div>
+          <div className="text-lg mt-3 font-light">
+            <p>
               {applicant} is a &ldquo;{facilitytype}&rdquo;-type establishment
-            </div>
-            <div>
+            </p>
+            <p>
               The address is <span className="underline">{address}</span>
-            </div>
-          </p>
+            </p>
+          </div>
         </div>
 
         <div className="w-full sm:w-full lg:w-1/2 bg-gray-50 rounded-xl mx-auto">
