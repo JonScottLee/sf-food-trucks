@@ -18,7 +18,7 @@ const stickyClasses: Classes = {
   title: 'text-black',
 };
 
-const stickyThreshold = 70;
+const stickyThreshold = 10;
 
 export const Nav = () => {
   const [sticky, setSticky] = useState(false);
