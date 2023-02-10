@@ -2,16 +2,17 @@ import { CardGrid } from '../../card-grid/card-grid';
 import { useFetchTrucks } from '../../../hooks/use-fetch-trucks';
 import { useRouter } from 'next/router';
 import { Button } from '../../button/button';
+import { AllTrucksSkeleton } from './all-trucks.skeleton';
+import { LoadingStripe } from '../../loading-stripe/loading-stripe';
 
 export const AllTrucks = () => {
   const router = useRouter();
   const { isFetching, foodTruckData } = useFetchTrucks();
 
-  if (isFetching) return <div>Loading...</div>;
+  if (true) return <AllTrucksSkeleton />;
 
   return (
     <>
-      <h1 className="text-5xl font-bold mb-10">All Trucks</h1>
       <CardGrid>
         {Object.keys(foodTruckData).map((key, idx) => {
           const truck = foodTruckData[key];

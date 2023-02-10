@@ -70,13 +70,13 @@ export const Nav = () => {
         >
           <ul className="list-reset lg:flex justify-end flex-1 items-center">
             <li className="mr-3">
-              <NavLink href={routes.allTrucks}>My Kingdom</NavLink>
+              <NavLink href={routes['all-trucks'].href}>My Kingdom</NavLink>
             </li>
             <li className="mr-3">
-              <NavLink href={routes.allTrucks}>For</NavLink>
+              <NavLink href={routes['all-trucks'].href}>For</NavLink>
             </li>
             <li className="mr-3">
-              <NavLink href={routes.allTrucks}>Some Links</NavLink>
+              <NavLink href={routes['all-trucks'].href}>Some Links</NavLink>
             </li>
           </ul>
           <Link
