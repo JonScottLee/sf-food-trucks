@@ -19,7 +19,7 @@ export const routes: Routes = {
     breadcrumbName: 'All Trucks',
   },
   'detail-page': {
-    href: '/detail-page',
+    href: '/all-trucks/detail-page',
     breadcrumbName: 'Details',
   },
 };

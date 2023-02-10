@@ -51,7 +51,9 @@ export const Breadcrumb = ({ pathName }: { pathName: string }) => {
                 <Link
                   href={crumbIsCurrentRoute ? '#' : routeData.href}
                   className={`${
-                    crumbIsCurrentRoute && 'font-bold disabled underline'
+                    crumbIsCurrentRoute
+                      ? 'font-bold disabled'
+                      : 'hover:underline'
                   } ml-1 text-sm text-white  md:ml-2`}
                 >
                   {routeData.breadcrumbName}

@@ -3,7 +3,7 @@ import { useFetchTrucks } from '../../../hooks/use-fetch-trucks';
 import { useRouter } from 'next/router';
 import { Button } from '../../button/button';
 import { AllTrucksSkeleton } from './all-trucks.skeleton';
-import { LoadingStripe } from '../../loading-stripe/loading-stripe';
+import { routes } from '../../../routes';
 
 export const AllTrucks = () => {
   const router = useRouter();
@@ -26,7 +26,7 @@ export const AllTrucks = () => {
                 <Button
                   clickHandler={() => {
                     router.push({
-                      pathname: 'detail-page',
+                      pathname: routes['detail-page'].href,
                       query: { id: truck.objectid },
                     });
                   }}
