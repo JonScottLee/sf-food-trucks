@@ -21,7 +21,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to the Food Truck Finder App</title>
       </Head>
       <Nav />
-      <main className="app h-screen">
+      <main className="app min-h-screen">
         <Container className="pt-2">
           <Breadcrumb pathName={router.pathname} />
         </Container>
