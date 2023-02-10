@@ -23,7 +23,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Nav />
       <main className="app min-h-screen">
         <Container className="pt-2">
-          <Breadcrumb pathName={router.pathname} />
+          <Breadcrumb routes={routes} pathName={router.pathname} />
         </Container>
 
         <div className="pt-5">

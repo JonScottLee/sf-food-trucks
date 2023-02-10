@@ -1,7 +1,13 @@
-import { RouteData, routes } from '../../routes';
+import { Routes, RouteData } from '../../routes';
 import Link from 'next/link';
 
-export const Breadcrumb = ({ pathName }: { pathName: string }) => {
+export const Breadcrumb = ({
+  routes,
+  pathName,
+}: {
+  routes: Routes;
+  pathName: string;
+}) => {
   const paths = pathName.split('/').filter(Boolean); // remove empty strings, all falsy values
   const currentPath = paths[paths.length - 1];
 
