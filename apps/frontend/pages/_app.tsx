@@ -9,7 +9,8 @@ import Head from 'next/head';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
-  const pathName = router.pathname.split('/')[1] || 'home';
+  const pathArr = router.pathname.split('/');
+  const pathName = pathArr[pathArr.length - 1] || 'home';
   const currentRoute = routes[pathName] as RouteData;
   const pageTitle = currentRoute.pageTitle;
 
