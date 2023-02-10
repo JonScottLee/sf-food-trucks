@@ -1,5 +1,4 @@
-/* eslint-disable */
-export default {
+module.exports = {
   displayName: 'frontend',
   preset: '../../jest.preset.js',
   transform: {
@@ -8,4 +7,5 @@ export default {
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
   coverageDirectory: '../../coverage/apps/frontend',
+  setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
 };
