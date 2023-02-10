@@ -6,6 +6,7 @@ import { Nav } from '../components/nav/nav';
 import { routes, RouteData } from '../routes';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
+import { Footer } from '../components/footer/footer';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
@@ -20,12 +21,12 @@ function CustomApp({ Component, pageProps }: AppProps) {
         <title>Welcome to the Food Truck Finder App</title>
       </Head>
       <Nav />
-      <main className="app">
+      <main className="app h-screen">
         <Container className="pt-2">
           <Breadcrumb pathName={router.pathname} />
         </Container>
 
-        <div className="pt-10">
+        <div className="pt-5">
           <Container>
             {pageTitle && (
               <h1 className="text-5xl font-bold mb-10">{pageTitle}</h1>
@@ -35,6 +36,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
           </Container>
         </div>
       </main>
+      <Footer />
     </>
   );
 }
