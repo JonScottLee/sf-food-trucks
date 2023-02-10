@@ -11,7 +11,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
   const pathName = router.pathname.split('/')[1] || 'home';
   const currentRoute = routes[pathName] as RouteData;
-  const pageTitle = 'foo'; // currentRoute.pageTitle;
+  const pageTitle = currentRoute.pageTitle;
 
   return (
     <>
