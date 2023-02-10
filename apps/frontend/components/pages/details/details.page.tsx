@@ -4,7 +4,7 @@ import { Button } from '../../button/button';
 import { useFetchTrucks } from '../../../hooks/use-fetch-trucks';
 import { DetailPageSkeleton } from './details.skeleton';
 
-export const DetailPage = ({ data }) => {
+export const DetailPage = () => {
   const { isFetching, foodTruckData } = useFetchTrucks();
   const router = useRouter();
   const id = router.query.id as string;
