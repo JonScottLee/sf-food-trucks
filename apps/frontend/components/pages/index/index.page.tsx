@@ -10,7 +10,7 @@ export const Index = () => (
         Where is your favorite food truck?
       </h1>
       <p className="leading-normal text-2xl mb-8">
-        Find all your favorite local food trucks!
+        Find all your local favorites!
       </p>
       <Link
         href={routes['all-trucks'].href}
