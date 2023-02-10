@@ -5,6 +5,9 @@ export const Breadcrumb = ({ pathName }: { pathName: string }) => {
   const paths = pathName.split('/').filter(Boolean); // remove empty strings, all falsy values
   const currentPath = paths[paths.length - 1];
 
+  // A breadcrumb isn't much good if it has nothing to show.
+  if (paths.length === 0) return null;
+
   return (
     <nav className="flex text-" aria-label="Breadcrumb">
       <ol className="inline-flex items-center space-x-1 md:space-x-3">
