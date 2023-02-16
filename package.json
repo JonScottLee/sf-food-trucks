@@ -2,10 +2,6 @@
   "name": "sf-food-trucks",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {
-    "build:api": "nx build api --outputPath=apps/api/dist",
-    "build:frontend": "nx build frontend --outputPath=apps/frontend/dist"
-  },
   "private": true,
   "dependencies": {
     "@nrwl/next": "15.6.3",
