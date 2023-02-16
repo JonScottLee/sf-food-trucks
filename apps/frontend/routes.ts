@@ -1,4 +1,4 @@
-type RouteName = 'all-trucks' | 'home' | 'detail-page';
+type RouteName = 'all-trucks' | 'home' | 'detail-page' | 404 | 500;
 
 export type RouteData = {
   href: string;
@@ -21,5 +21,15 @@ export const routes: Routes = {
   'detail-page': {
     href: '/all-trucks/detail-page',
     breadcrumbName: 'Details',
+  },
+  404: {
+    href: '/404',
+    pageTitle: '404',
+    breadcrumbName: '404',
+  },
+  500: {
+    href: '/500',
+    pageTitle: '500',
+    breadcrumbName: '500',
   },
 };
