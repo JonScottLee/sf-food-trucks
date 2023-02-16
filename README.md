@@ -6,7 +6,7 @@
 
 ## Rationale
 
-Nx is a great tool for manging monorepos, and any decently-complex frontend app will benefit from being a monorepo (in my humble opinion). A monorepo is a good way to help enforce package boundaries -- for example, an app's UI components can go in their own package, to emphasize that they are standalone, param-driven components. Data fetching can live in the app itself, not in the UI repo. You can have a backend project for munging / sanitizing / whatever, rather than do it in the browser. And so on.
+Nx is a great tool for manging monorepos, and any decently-complex frontend app will benefit from being a monorepo (in my humble opinion). A monorepo is a good way to help enforce package boundaries -- for example, an app's UI components can go in their own package, to emphasize that they are standalone, param-driven components. Data fetching can live in the app itself, not in the UI repo. You can have a backend project for munging / sanitizing / whatever, rather than do it in the browser. You can create a project just for your e2e tests, which absolutely need to be isolated from the actual components, if you're writing e2e tests properly. And so on.
 
 For this app, much of this benefit is going under-utilized, for the time being. But future expansion will be much easier with this structure in place.
 
