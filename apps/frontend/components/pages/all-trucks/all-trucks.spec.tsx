@@ -35,7 +35,7 @@ describe('All Trucks Page', () => {
     mock.reset();
   });
 
-  it("when 'load more' clicked, should load 50 more items", async () => {
+  it("when 'load more' clicked, should load more items", async () => {
     // Arrange
     mock.onGet('/food-trucks').reply(200, mockAPIResponse);
 
