@@ -20,22 +20,17 @@ export const DetailPage = () => {
         className="w-full flex flex-col h-screen content-center justify-start"
       >
         <div className="text-center m-10">
-          {isFetching ? (
-            <DetailPageSkeleton />
-          ) : (
-            <>
-              <h1 className="text-5xl font-bold">{applicant}</h1>
-              <div className="text-lg mt-3 font-light">
-                <p>
-                  {applicant} is a &ldquo;{facilitytype}&rdquo;-type
-                  establishment
-                </p>
-                <p>
-                  The address is <span className="underline">{address}</span>
-                </p>
-              </div>
-            </>
-          )}
+          <>
+            <h1 className="text-5xl font-bold">{applicant}</h1>
+            <div className="text-lg mt-3 font-light">
+              <p>
+                {applicant} is a &ldquo;{facilitytype}&rdquo;-type establishment
+              </p>
+              <p>
+                The address is <span className="underline">{address}</span>
+              </p>
+            </div>
+          </>
         </div>
 
         <div className="w-full sm:w-full lg:w-1/2 bg-gray-50 rounded-xl mx-auto">
