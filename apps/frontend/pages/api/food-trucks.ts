@@ -1,9 +1,17 @@
-import { apiConfig } from './api-config';
+import type { NextApiRequest, NextApiResponse } from 'next';
 import { FoodTruck, FoodTruckProps } from '@sf-food-trucks/util';
-import { Request, Response } from 'express';
-import axios from 'axios';
+import { apiConfig } from '../../api-config';
+import axios, { AxiosError } from 'axios';
 
-export const getFoodTrucks = async (req: Request, res: Response) => {
+type Error = {
+  status: string;
+  message: string;
+};
+
+export default async function userHandler(
+  req: NextApiRequest,
+  res: NextApiResponse<FoodTruckProps[] | Error>
+) {
   await axios
     .get<FoodTruckProps[]>(apiConfig.SOURCE_API)
     .then(({ data }) => {
@@ -18,7 +26,7 @@ export const getFoodTrucks = async (req: Request, res: Response) => {
         throw new Error();
       }
     })
-    .catch((err) => {
+    .catch(() => {
       // This is for the benefit of perusing runtime logs
       console.error(
         'action=getFoodTrucks message=Something went wrong parsing the food truck data for the client'
@@ -30,4 +38,4 @@ export const getFoodTrucks = async (req: Request, res: Response) => {
         message: 'Something went wrong, please try again later.',
       });
     });
-};
+}

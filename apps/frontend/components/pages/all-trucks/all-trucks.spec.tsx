@@ -9,7 +9,7 @@ const mock = new MockAdapter(axios);
 describe('All Trucks Page', () => {
   it('should initially render the loading skeleton', () => {
     // Arrange
-    mock.onGet('/food-trucks').reply(200, mockAPIResponse);
+    mock.onGet('/api/food-trucks').reply(200, mockAPIResponse);
 
     // Act
     const { getAllByRole } = render(<AllTrucks />);
@@ -22,7 +22,7 @@ describe('All Trucks Page', () => {
 
   it('when data is fetched, should render no more than 50 items', async () => {
     // Arrange
-    mock.onGet('/food-trucks').reply(200, mockAPIResponse);
+    mock.onGet('/api/food-trucks').reply(200, mockAPIResponse);
 
     // Act
     const { getAllByRole } = render(<AllTrucks />);
@@ -37,7 +37,7 @@ describe('All Trucks Page', () => {
 
   it("when 'load more' clicked, should load more items", async () => {
     // Arrange
-    mock.onGet('/food-trucks').reply(200, mockAPIResponse);
+    mock.onGet('/api/food-trucks').reply(200, mockAPIResponse);
 
     // Act
     const { getAllByRole } = render(<AllTrucks />);

@@ -11,7 +11,7 @@ const mapTruckData = (data: FoodTruck[]) => {
 
 class FoodTruckDataServiceRoot {
   async getAll() {
-    const { data } = await axios.get<FoodTruck[]>('/food-trucks');
+    const { data } = await axios.get<FoodTruck[]>('/api/food-trucks');
 
     return mapTruckData(data);
   }
