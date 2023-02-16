@@ -20,7 +20,7 @@ describe('All Trucks Page', () => {
     mock.reset();
   });
 
-  it('show initially render no more than 50 items', async () => {
+  it('when data is fetched, should render no more than 50 items', async () => {
     // Arrange
     mock.onGet('/food-trucks').reply(200, mockAPIResponse);
 
