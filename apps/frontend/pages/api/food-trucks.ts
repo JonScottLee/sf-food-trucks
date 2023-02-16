@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { FoodTruck, FoodTruckProps } from '@sf-food-trucks/util';
 import { apiConfig } from '../../api-config';
-import axios, { AxiosError } from 'axios';
+import axios from 'axios';
 
 type Error = {
   status: string;
