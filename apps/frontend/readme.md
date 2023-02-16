@@ -5,7 +5,5 @@
 Starting the frontend
 
 ```bash
-$ npx nx run frontend:dev
+$ npx nx run frontend:serve
 ```
-
-App will become available on port 4200. This command also starts the API server, which lives on port :3333.
