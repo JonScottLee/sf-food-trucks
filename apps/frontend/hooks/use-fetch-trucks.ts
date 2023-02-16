@@ -36,5 +36,5 @@ export const useFetchTrucks = () => {
     });
   }, [foodTruckData]);
 
-  return { isFetching, foodTruckData };
+  return { isFetching, foodTruckData: foodTruckData || {} };
 };
