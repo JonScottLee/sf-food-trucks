@@ -1,6 +1,6 @@
 import { AllTrucks } from './all-trucks.page';
 import { mockAPIResponse } from './__mocks__/food-trucks-api-response';
-import { render, waitFor } from '@testing-library/react';
+import { render, waitFor, fireEvent, screen } from '@testing-library/react';
 import axios from '../../../axios';
 import MockAdapter from 'axios-mock-adapter';
 
@@ -30,6 +30,29 @@ describe('All Trucks Page', () => {
     // Assert
     await waitFor(() => {
       expect(getAllByRole('heading', { level: 2 })).toHaveLength(50);
+    });
+
+    mock.reset();
+  });
+
+  it("when 'load more' clicked, should load 50 more items", async () => {
+    // Arrange
+    mock.onGet('/food-trucks').reply(200, mockAPIResponse);
+
+    // Act
+    const { getAllByRole } = render(<AllTrucks />);
+
+    await waitFor(() => {
+      expect(getAllByRole('heading', { level: 2 })).toHaveLength(50);
+    });
+
+    const loadMore = screen.getByRole('button', { name: 'Load More' });
+
+    fireEvent.click(loadMore);
+
+    // Assert
+    await waitFor(() => {
+      expect(getAllByRole('heading', { level: 2 })).toHaveLength(51);
     });
 
     mock.reset();
