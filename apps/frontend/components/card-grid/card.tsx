@@ -17,9 +17,9 @@ export const Card = ({ title, body, action }: CardProps) => (
     />
     <div className="w-full px-2 rounded bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
       <div className="block p-6 rounded-lg bg-white max-w-sm">
-        <h5 className="text-gray-900 text-xl leading-tight font-medium mb-2">
+        <h2 className="text-gray-900 text-xl leading-tight font-medium mb-2">
           {title}
-        </h5>
+        </h2>
         <div className="text-gray-700 text-base mb-4">{body}</div>
         {action && action}
       </div>

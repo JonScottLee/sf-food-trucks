@@ -21,9 +21,11 @@ export const AllTrucks = () => {
   const [showingAllItems, setShowingAllItems] = useState(false);
 
   useEffect(() => {
+    if (isFetching) return;
+
     setItemsToShow(Object.keys(foodTruckData).slice(0, showLimit));
     setShowingAllItems(showLimit >= Object.keys(foodTruckData).length);
-  }, [showLimit, foodTruckData]);
+  }, [showLimit, foodTruckData, isFetching]);
 
   if (isFetching) return <AllTrucksSkeleton />;
 
