@@ -37,6 +37,21 @@ export const Breadcrumb = ({
         {paths.map((path) => {
           const routeData = routes[path] as RouteData;
           const crumbIsCurrentRoute = currentPath === path;
+          const crumbClasses = 'font-bold ml-1 text-sm text-white  md:ml-2';
+          const { breadcrumbName } = routeData;
+
+          const CrumbAsSpan = () => (
+            <span className={crumbClasses}>{breadcrumbName}</span>
+          );
+
+          const CrumbAsLink = () => (
+            <Link
+              href={routeData.href}
+              className={`hover:underline ${crumbClasses}`}
+            >
+              {breadcrumbName}
+            </Link>
+          );
 
           return (
             <li key={path}>
@@ -54,16 +69,7 @@ export const Breadcrumb = ({
                     clipRule="evenodd"
                   ></path>
                 </svg>
-                <Link
-                  href={crumbIsCurrentRoute ? '#' : routeData.href}
-                  className={`${
-                    crumbIsCurrentRoute
-                      ? 'font-bold disabled'
-                      : 'hover:underline'
-                  } ml-1 text-sm text-white  md:ml-2`}
-                >
-                  {routeData.breadcrumbName}
-                </Link>
+                {crumbIsCurrentRoute ? <CrumbAsSpan /> : <CrumbAsLink />}
               </div>
             </li>
           );
