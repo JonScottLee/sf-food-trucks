@@ -56,8 +56,11 @@ export const AllTrucks = () => {
       </CardGrid>
 
       {!showingAllItems && (
-        <div className="mt-10">
-          <Button clickHandler={() => setShowLimit(showLimit + showIncrement)}>
+        <div className="mt-10 mx-auto w-full text-center">
+          <Button
+            className="w-full sm:w-1/4 lg:w-1/5"
+            clickHandler={() => setShowLimit(showLimit + showIncrement)}
+          >
             Load More
           </Button>
         </div>
