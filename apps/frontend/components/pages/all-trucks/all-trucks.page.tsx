@@ -1,7 +1,6 @@
-import { CardGrid } from '../../card-grid/card-grid';
 import { useFetchTrucks } from '../../../hooks/use-fetch-trucks';
 import { useRouter } from 'next/router';
-import { Button, routes } from '@sf-food-trucks/frontend-common';
+import { Button, CardGrid, routes } from '@sf-food-trucks/frontend-common';
 import { AllTrucksSkeleton } from './all-trucks.skeleton';
 import { useState, useEffect } from 'react';
 
