@@ -1,4 +1,4 @@
-import { FoodTruckProps } from '../types/food-truck';
+import { FoodTruckProps } from './food-truck-types';
 import axios from 'axios';
 
 export class FoodTruck {
