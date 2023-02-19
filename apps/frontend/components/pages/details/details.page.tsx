@@ -38,6 +38,7 @@ export const DetailPage = () => {
           <div className="bg-white rounded shadow px-4 pt-5 pb-4 sm:p-6 sm:pb-4">
             <div>
               <iframe
+                title={`Goo}gle Map for ${applicant} located at ${address}`}
                 className="w-full"
                 width="450"
                 height="350"
