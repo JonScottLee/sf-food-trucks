@@ -1,2 +1,2 @@
-export * from './lib/types';
-export * from './lib/models';
+export * from './lib/entities/food-truck/food-truck-model';
+export * from './lib/entities/food-truck/food-truck-types';
