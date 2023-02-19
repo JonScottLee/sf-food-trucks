@@ -5,4 +5,4 @@ export * from './lib/container/container';
 export * from './lib/footer/footer';
 export * from './lib/loading-stripe/loading-stripe';
 export * from './lib/nav/nav';
-export * from './routes';
+export * from './lib/routes';

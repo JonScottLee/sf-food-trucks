@@ -1,4 +1,4 @@
-import { Routes, RouteData } from '../../routes';
+import { Routes, RouteData } from '../routes';
 import Link from 'next/link';
 
 export const Breadcrumb = ({
