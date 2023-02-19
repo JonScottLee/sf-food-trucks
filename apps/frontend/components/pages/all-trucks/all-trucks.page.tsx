@@ -1,9 +1,8 @@
 import { CardGrid } from '../../card-grid/card-grid';
 import { useFetchTrucks } from '../../../hooks/use-fetch-trucks';
 import { useRouter } from 'next/router';
-import { Button } from '../../button/button';
+import { Button, routes } from '@sf-food-trucks/frontend-common';
 import { AllTrucksSkeleton } from './all-trucks.skeleton';
-import { routes } from '../../../routes';
 import { useState, useEffect } from 'react';
 
 export const AllTrucks = () => {

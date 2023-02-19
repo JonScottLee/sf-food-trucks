@@ -1,5 +1,5 @@
 import { Dispatch, SetStateAction } from 'react';
-import { routes } from '@sf-food-trucks/frontend-common';
+import { routes } from '../../routes';
 import { NavLink } from './nav-link';
 import Link from 'next/link';
 

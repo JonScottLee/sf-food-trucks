@@ -1,9 +1,9 @@
 import './styles.css';
 import { AppProps } from 'next/app';
-import { Breadcrumb } from '../components/breadcrumb/breadcrumb';
+import { Breadcrumb } from '@sf-food-trucks/frontend-common';
 import { Container } from '../components/container/container';
 import { Nav } from '../components/nav/nav';
-import { routes, RouteData } from '../routes';
+import { routes, RouteData } from '@sf-food-trucks/frontend-common';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
 import { Footer } from '../components/footer/footer';

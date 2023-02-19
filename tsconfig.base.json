@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@sf-food-trucks/frontend-common": ["libs/frontend-common/src/index.ts"],
       "@sf-food-trucks/util": ["libs/util/src/index.ts"]
     }
   },
