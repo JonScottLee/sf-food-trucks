@@ -15,7 +15,7 @@ export const Card = ({ title, body, action }: CardProps) => (
       height="320"
       src="https://fakeimg.pl/420x320/eeeeee,128/333333,255/?text=Food Pic&font=lobster"
     />
-    <div className="w-full px-2 rounded bg-white dark:bg-gray-800 duration-300 hover:-translate-y-1">
+    <div className="w-full px-2 rounded bg-white duration-300 hover:-translate-y-1">
       <div className="block p-6 rounded-lg bg-white max-w-sm">
         <h2 className="text-gray-900 text-xl leading-tight font-medium mb-2">
           {title}

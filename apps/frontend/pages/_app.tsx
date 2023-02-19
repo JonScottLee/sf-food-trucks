@@ -2,10 +2,14 @@ import './styles.css';
 import { AppProps } from 'next/app';
 import { Breadcrumb } from '@sf-food-trucks/frontend-common';
 import { Nav } from '../components/nav/nav';
-import { routes, RouteData, Container } from '@sf-food-trucks/frontend-common';
+import {
+  Container,
+  Footer,
+  RouteData,
+  routes,
+} from '@sf-food-trucks/frontend-common';
 import { useRouter } from 'next/router';
 import Head from 'next/head';
-import { Footer } from '../components/footer/footer';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   const router = useRouter();
