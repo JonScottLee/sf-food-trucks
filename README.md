@@ -14,6 +14,14 @@ For this app, much of this benefit is going under-utilized, for the time being. 
 
 Run `npx nx serve frontend` or `npx nx run frontend:serve` for a dev server on localhost:4200.
 
+## Data Concerns
+This repo uses NextJS's "api routes" functionality to handle fetching data. For a simple project like this, that suffices. At some point, an app might reach a level of complexity where one would generate a 'backend' project, which could be deployed separately, given appropriate resources in k8s, handle complex caching concerns, etc. Outside the scope of this project, though.
+
+## Architecture
+See Git commit history for specific info re: decisions... but the high-level is that this is a NextJS app, because NextJS handles a lot of obvious concerns out of the box, especially routing, and SSG vs. SSR vs.
+
+This app uses Nx to enforce separation of concerns, and provide future extensibility, especially for handling more robust data-fetching needs, as mentioned in previous section. Setting that aside, Nx provides some great CLI file generation abilities, and a very logical way to separate component libs from frontend apps. And it's build tools are very easy to use to boot.
+
 ## Further help
 
-Visit the [Nx Documentation](https://nx.dev) to learn more.
+Visit the [Nx Documentation](https://nx.dev) to learn more. Contact the author of the repo re: questions about specific decisions -- he'd love to talk shop.
