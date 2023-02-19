@@ -3,6 +3,7 @@ import { useRouter } from 'next/router';
 import { Button, CardGrid, routes } from '@sf-food-trucks/frontend-common';
 import { AllTrucksSkeleton } from './all-trucks.skeleton';
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 export const AllTrucks = () => {
   // How many trucks do we want to show at a time
@@ -39,16 +40,14 @@ export const AllTrucks = () => {
               title={truck.applicant}
               body={truck.address}
               action={
-                <Button
-                  clickHandler={() => {
-                    router.push({
-                      pathname: routes['detail-page'].href,
-                      query: { id: truck.objectid },
-                    });
+                <Link
+                  href={{
+                    pathname: routes['detail-page'].href,
+                    query: { id: truck.objectid },
                   }}
                 >
-                  Details
-                </Button>
+                  <Button>Details</Button>
+                </Link>
               }
             />
           );

@@ -1,8 +1,9 @@
-import { useRouter } from 'next/router';
-import { uiConfig } from '../../../ui-config';
 import { Button } from '@sf-food-trucks/frontend-common';
-import { useFetchTrucks } from '../../../hooks/use-fetch-trucks';
 import { DetailPageSkeleton } from './details.skeleton';
+import { uiConfig } from '../../../ui-config';
+import { useFetchTrucks } from '../../../hooks/use-fetch-trucks';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 
 export const DetailPage = () => {
   const { isFetching, foodTruckData } = useFetchTrucks();
@@ -49,7 +50,9 @@ export const DetailPage = () => {
           </div>
         </div>
         <div className="mx-auto my-10">
-          <Button clickHandler={router.back}>Go Back</Button>
+          <Link href="/">
+            <Button>Go Back</Button>
+          </Link>
         </div>
       </main>
     </div>

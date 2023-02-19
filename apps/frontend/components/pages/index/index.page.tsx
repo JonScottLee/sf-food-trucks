@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { routes } from '@sf-food-trucks/frontend-common';
+import { routes, Button } from '@sf-food-trucks/frontend-common';
 
 export const Index = () => (
   <>
@@ -12,12 +12,11 @@ export const Index = () => (
       <p className="mx-auto md:mx-0 leading-normal text-2xl mb-8">
         Find all your local favorites!
       </p>
-      <Link
-        href={routes['all-trucks'].href}
-        className="mx-auto lg:mx-0 hover:underline bg-white text-gray-800 font-bold rounded-full my-6 py-4 px-8 shadow-lg focus:outline-none focus:shadow-outline transform transition hover:scale-105 duration-300 ease-in-out"
-      >
-        See Food Trucks
-      </Link>
+      <div className="mx-auto md:mx-0">
+        <Link href={routes['all-trucks'].href}>
+          <Button>See Food Trucks</Button>
+        </Link>
+      </div>
     </div>
     <div className="w-full md:w-3/5 py-6 text-center">
       <Image
