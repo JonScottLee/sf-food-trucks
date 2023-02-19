@@ -24,6 +24,10 @@ See Git commit history for specific info re: decisions... but the high-level is 
 
 This app uses Nx to enforce separation of concerns, and provide future extensibility, especially for handling more robust data-fetching needs, as mentioned in previous section. Setting that aside, Nx provides some great CLI file generation abilities, and a very logical way to separate component libs from frontend apps. And it's build tools are very easy to use to boot.
 
+## Notes
+
+Not all pages in this app have unit tests written, as I feel that writing the tests for the most complex page is enough of a demonstration. In that vein, this app also has no e2e tests written, though I did choose to set up the project, albeit it uses a Cypress boilerplate, and I prefer Playwright. Future enhancement.
+
 ## Further help
 
 Visit the [Nx Documentation](https://nx.dev) to learn more. Contact the author of the repo re: questions about specific decisions -- he'd love to talk shop.
