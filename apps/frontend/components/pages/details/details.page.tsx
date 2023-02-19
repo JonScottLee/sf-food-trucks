@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { uiConfig } from '../../../ui-config';
-import { Button } from '../../button/button';
+import { Button } from '@sf-food-trucks/frontend-common';
 import { useFetchTrucks } from '../../../hooks/use-fetch-trucks';
 import { DetailPageSkeleton } from './details.skeleton';
 

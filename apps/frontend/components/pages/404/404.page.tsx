@@ -1,4 +1,4 @@
-import { Button } from '../../button/button';
+import { Button } from '@sf-food-trucks/frontend-common';
 import { useRouter } from 'next/router';
 
 export const Error404 = () => {

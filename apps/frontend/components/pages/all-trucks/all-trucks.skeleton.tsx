@@ -1,6 +1,6 @@
 import { CardGrid } from '../../card-grid/card-grid';
 import { LoadingStripe } from '../../loading-stripe/loading-stripe';
-import { Button } from '../../button/button';
+import { Button } from '@sf-food-trucks/frontend-common';
 
 const ActionButton = () => <Button>Details</Button>;
 
