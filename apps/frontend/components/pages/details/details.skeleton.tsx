@@ -1,4 +1,4 @@
-import { LoadingStripe } from '../../loading-stripe/loading-stripe';
+import { LoadingStripe } from '@sf-food-trucks/frontend-common';
 
 export const DetailPageSkeleton = () => (
   <div className="pt-20 center w-1/2 text-center mx-auto">

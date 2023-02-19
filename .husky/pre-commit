@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx lint-staged && npx nx run frontend:test
+npx lint-staged && npx nx run frontend:test && npx nx run frontend-common:test

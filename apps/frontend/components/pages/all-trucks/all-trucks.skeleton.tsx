@@ -1,5 +1,8 @@
-import { LoadingStripe } from '../../loading-stripe/loading-stripe';
-import { Button, CardGrid } from '@sf-food-trucks/frontend-common';
+import {
+  Button,
+  CardGrid,
+  LoadingStripe,
+} from '@sf-food-trucks/frontend-common';
 
 const ActionButton = () => <Button>Details</Button>;
 
