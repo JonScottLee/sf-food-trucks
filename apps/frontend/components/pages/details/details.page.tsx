@@ -1,4 +1,4 @@
-import { Button } from '@sf-food-trucks/frontend-common';
+import { Button, routes } from '@sf-food-trucks/frontend-common';
 import { DetailPageSkeleton } from './details.skeleton';
 import { uiConfig } from '../../../ui-config';
 import { useFetchTrucks } from '../../../hooks/use-fetch-trucks';
@@ -51,7 +51,7 @@ export const DetailPage = () => {
           </div>
         </div>
         <div className="mx-auto my-10">
-          <Link href="/">
+          <Link href={routes['all-trucks'].href}>
             <Button>Go Back</Button>
           </Link>
         </div>
