@@ -9,7 +9,7 @@ export const Index = () => (
       <h1 className="my-4 text-5xl font-bold leading-tight">
         Where is your favorite food truck?
       </h1>
-      <p className="leading-normal text-2xl mb-8">
+      <p className="mx-auto md:mx-0 leading-normal text-2xl mb-8">
         Find all your local favorites!
       </p>
       <Link
