@@ -4,8 +4,8 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
-    "@nrwl/next": "15.6.3",
-    "axios": "^1.3.2",
+    "@nrwl/next": "16.0.0",
+    "axios": "^1.6.8",
     "express": "^4.18.1",
     "next": "13.1.1",
     "react": "18.2.0",
